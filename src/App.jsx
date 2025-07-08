@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import Header from './components/Header'
 import SeenDrinks from './components/SeenDrinks'
+import CocktailDisplay from './components/CocktailDisplay'
 
 function App() {
   const [currentDrink, setCurrentDrink] = useState(null)
@@ -29,6 +30,10 @@ function App() {
       <Header />
       <div className="content-container">
         <SeenDrinks seenDrinks={seenDrinks} />
+      </div>
+      <div className="content-container">
+        <SeenDrinks seenDrinks={seenDrinks} />
+        <CocktailDisplay currentDrink={currentDrink} onDiscoverClick={fetchRandomDrink} />
       </div>
     </div>
   )
