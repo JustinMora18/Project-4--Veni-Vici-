@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap');
+
+:root {
+    --font-primary: 'Poppins', sans-serif;
+
+    --color-bg: #1a1a1a;
+    --color-primary: #e43e3e;
+    --color-primary-dark: #920c0c;
+    --color-white: #ffffff;
+    --color-text: #dedede;
+    --color-gradient: linear-gradient(180deg, #4c1717 5%, #b33131 50%);
+
+    --text-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+
+    --font-size-title: 110px;
+    --font-size-subtitle: 30px;
+    --font-size-button: 30px;
+
+    --border-radius: 15px;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-primary);
+    background: var(--color-gradient);
+    color: var(--color-text);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-container {
+    width: 95%;
+    max-width: 1500px;
+}
+
+.content-container {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    gap: 20%;
+    align-items: flex-start;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.header h1 {
+    font-size: var(--font-size-title);
+    color: var(--color-primary);
+    margin: 0;
+    line-height: .8;
+    font-weight:900;
+    text-transform: uppercase;
+    text-shadow:var(--text-shadow);
+}
+
+.header p {
+    font-size: var(--font-size-subtitle);
+    max-width: 1400px;
+    color: var(--color-text);
+    text-shadow:var(--text-shadow);
+}
+
+.seen-drinks {
+    width: 200px;
+}
+
+.section-title {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--color-white);
+    line-height: .8;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-shadow:var(--text-shadow);
+}
+
+.seen-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 740px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+.seen-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.seen-list::-webkit-scrollbar-track {
+    background: #222;
+    border-radius: 4px;
+}
+
+.seen-list::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 4px;
+}  
+
+.seen-item {
+    text-align: center;
+}
+
+.seen-item img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.seen-item p {
+    color: var(--color-white);
+    font-weight: 700;
+    margin-top: 8px;
+    font-size: 14px;
+    text-shadow:var(--text-shadow);
+}
+
+.cocktail-display {
+    text-align: center;
+    flex: 1;
+}
+
+.drink-image {
+    width: 500px;
+    border-radius: var(--border-radius);
+    object-fit: cover;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.drink-name {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1;
+    text-transform: uppercase;
+    margin: 20px 0;
+    color: var(--color-white);
+    text-shadow:var(--text-shadow);
+}
+
+.attributes {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.attribute-btn {
+    background: var(--color-primary);
+    border: none;
+    color: var(--color-white);
+    padding: 22px 30px;
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-button);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.attribute-btn:hover {
+    background: var(--color-primary-dark);
+}
+
+.discover-btn {
+    background: var(--color-white);
+    border: none;
+    color: #000;
+    font-weight: 900;
+    padding: 15px 100px;
+    font-size: 40px;
+    text-transform: uppercase;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    margin-top: 24px;
+    transition: transform 0.2s;
+}
+
+.discover-btn:hover {
+    transform: scale(1.05);
+}
+
+.ban-items {
+    width: 300px;
+    overflow-x: visible; 
+    padding-right: 8px;
+}
+
+.ban-items p {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+}  
+
+.ban-items::-webkit-scrollbar {
+    width: 6px;
+}
+
+.ban-items::-webkit-scrollbar-track {
+    background: #222;
+    border-radius: 4px;
+}
+
+.ban-items::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 4px;
+}  
+
+.ban-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 740px;
+    overflow-y: auto;
+    padding: 0 1.5rem 1.5rem 0;
+}
+
+.ban-item-btn {
+    display: block;
+    padding: 22px 30px;
+    text-align: center;
+    background: var(--color-primary);
+    border: none;
+    color: var(--color-white);
+    font-size: var(--font-size-button);
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    transition: background 0.3s;
+}
+
+.ban-item-btn:hover {
+    background: var(--color-primary-dark);
+}
+
+.ban-list .ban-item-btn {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+.ban-list .ban-item-btn:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+}  
+
+.attribute-btn,
+.discover-btn {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+.attribute-btn:hover,
+.discover-btn:hover{
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+}
